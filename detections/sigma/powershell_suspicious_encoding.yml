@@ -1,0 +1,19 @@
+title: Suspicious PowerShell Base64 Encoded Command
+id: 9b1f8b3c-5d2e-4a6b-8f0d-9e7c6b5a4d3f
+status: stable
+description: Detects base64 encoded PowerShell commands often used in download cradles
+references:
+    - https://attack.mitre.org/techniques/T1059/001/
+logsource:
+    product: windows
+    service: powershell
+detection:
+    selection:
+        ScriptBlockText|contains|all:
+            - 'IEX'
+            - 'DownloadString'
+            - 'http'
+    condition: selection
+falsepositives:
+    - Legitimate software updates
+level: high
